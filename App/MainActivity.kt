@@ -1,16 +1,30 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_s_i.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        buSI.setOnClickListener {
+            val intent =Intent(this,SI::class.java)
+            startActivity(intent)
+        }
+        buCI.setOnClickListener {
+            val intent =Intent(this,CI::class.java)
+            startActivity(intent)
+        }
+        buEMI.setOnClickListener {
+            val intent =Intent(this,EMI::class.java)
+            startActivity(intent)
+        }
     }
     var isNewOp=true
     var dot=false
